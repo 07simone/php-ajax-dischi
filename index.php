@@ -9,29 +9,29 @@
     <title>Document</title>
 </head>
 <body>
-        <?php 
-            include __DIR__ . '/server/data.php';
-
-        ?>
-
+    
 <header>
 
 </header>
-<main>
-    <div>
-        <?php foreach($dischi as $disk){ ?>
-        <img src="" alt="">
-        <h1> <?php echo $disk["title"] ?></h1>
-        <h4><?php echo $disk["autore"] ?></h4>
-        <p><?php echo $disk["genere"] ?></p>
-        <p><?php echo $disk["anno"] ?></p>
-        <?php } ?>
+
+<main id="app">
+    <div class="container" >
+        <div class="dischi" v-for="disk in dischi">
+            <img :src="disk.poster" alt="">
+            <div class="text">
+                <h1> {{disk.title}} </h1>
+                <h4> {{disk.autore}} </h4>
+                <p> {{disk.genere}}</p>
+                <p> {{disk.anno}}</p>
+            </div>
+            
+        </div>
     </div>
         
 
 </main>
-
-<script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/main.js"></script>
+
 </body>
 </html>

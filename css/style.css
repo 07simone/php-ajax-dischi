@@ -8,15 +8,23 @@ header {
     background-color: black;
 }
 .container {
-    height: 100%;
-    width: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.dischi{
+    margin-right: 1rem;
+    width: calc((100% - 5rem) / 5);
+    
+}
+.text{
+    color: white;
 }
 img {
-    width: 100%;
-    padding: .3rem;
-    margin-left: 1rem;
+    width: 100%; 
 }
 main {
-    height: 90vh;
     background-color: #1E2D3B;
 }
